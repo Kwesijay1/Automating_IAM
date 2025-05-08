@@ -1,0 +1,23 @@
+[2025-05-08 14:04:34] ERROR: This script must be run as root
+=== USER CREATION LOG - 2025-05-08 14:04:45 ===
+[2025-05-08 14:04:45] INFO: Starting user creation from users.txt
+[2025-05-08 14:04:45] PROCESSING: Creating jdoe (John Doe)
+[2025-05-08 14:04:45] WARNING: User jdoe already exists. Skipping.
+[2025-05-08 14:04:45] PROCESSING: Creating asmith (Alice Smith)
+[2025-05-08 14:04:45] WARNING: User asmith already exists. Skipping.
+[2025-05-08 14:04:45] PROCESSING: Creating mjones (Mike Jones)
+[2025-05-08 14:04:45] WARNING: User mjones already exists. Skipping.
+[2025-05-08 14:04:45] PROCESSING: Creating  ()
+[2025-05-08 14:04:46] ERROR: Failed to create user 
+[2025-05-08 14:04:46] INFO: User creation completed. Log saved to ./iam_setup.log
+=== USER CREATION LOG - 2025-05-08 14:06:11 ===
+[2025-05-08 14:06:11] INFO: Starting user creation from users.txt
+[2025-05-08 14:06:11] PROCESSING: Creating jdoe (John Doe)
+[2025-05-08 14:06:14] SUCCESS: Created jdoe. Email sent to rocka111@outlook.com 
+[2025-05-08 14:06:14] PROCESSING: Creating asmith (Alice Smith)
+[2025-05-08 14:06:17] SUCCESS: Created asmith. Email sent to adjeigideon911@gmail.com 
+[2025-05-08 14:06:17] PROCESSING: Creating mjones (Mike Jones)
+[2025-05-08 14:06:20] SUCCESS: Created mjones. Email sent to gideon.adjei@amalitechtraining.org
+[2025-05-08 14:06:20] PROCESSING: Creating  ()
+[2025-05-08 14:06:20] ERROR: Failed to create user 
+[2025-05-08 14:06:20] INFO: User creation completed. Log saved to ./iam_setup.log
