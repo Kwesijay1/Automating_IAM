@@ -18,7 +18,7 @@ fi
 
 # Initialize log file
 touch "$LOG_FILE"
-chmod 644 "$LOG_FILE"  # Readable by others for auditing
+chmod 644 "$LOG_FILE" 
 echo "=== USER CREATION LOG - $(date '+%Y-%m-%d %H:%M:%S') ===" >> "$LOG_FILE"
 
 # Initialize password file
@@ -102,10 +102,10 @@ Username: $username
 Temporary Password: $temp_password
 Group: $group
 
-You must change your password at first login.
+Kindly change your password at first login.
 
 Regards,
-IT Team"
+System Administrator"
 
     if echo "$message" | mail -s "$EMAIL_SUBJECT" "$user_email"; then
         echo "[$(date '+%Y-%m-%d %H:%M:%S')] SUCCESS: Created $username. Email sent to $user_email" | tee -a "$LOG_FILE"
@@ -117,6 +117,7 @@ IT Team"
 # Main execution
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] INFO: Starting user creation from $USERS_FILE" | tee -a "$LOG_FILE"
 
+# Read users from CSV file
 tail -n +2 "$USERS_FILE" | while IFS=, read -r username fullname group email; do
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] PROCESSING: Creating $username ($fullname)" | tee -a "$LOG_FILE"
     create_user_with_email "$username" "$fullname" "$group" "$email"
