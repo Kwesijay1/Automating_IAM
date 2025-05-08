@@ -2,7 +2,7 @@
 
 # This script is designed to create users and groups, set up home directories, generate passwords, and log actions.
 # It creates a new IAM password policies and the necessary permissions and attaches it to the root directory.
-
+#Author: Gideon Adjei
 
 # Configuration
 PASSWORD_FILE="/root/user_passwords.txt"
