@@ -68,7 +68,7 @@ chmod +x iam_setup.sh
 
 ---
 
-## **🛠 Usage**
+## ** Usage**
 Run the script with the CSV file as input:
 ```bash
 sudo ./iam_setup.sh users.txt
