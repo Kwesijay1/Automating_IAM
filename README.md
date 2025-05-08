@@ -1,7 +1,6 @@
 # Automating IAM (Identity and Access Management) - Linux User Provisioning
-This lab exercise assists learners to write a Bash script to automate Identity and Access  Management (IAM) tasks in Linux
-
-This project automates the creation of Linux user accounts with email notifications. It reads user details from a CSV file, creates accounts with secure temporary passwords, forces password changes on first login, and sends credentials via email.
+This lab exercise assists learners to write a Bash script to automate Identity and Access  Management (IAM) tasks in Linux email notifications.
+It reads user details from a CSV file, creates accounts with secure temporary passwords, forces password changes on first login, and sends credentials via email.
 
 ## ** Features**
 - **Bulk user creation** from a CSV file
