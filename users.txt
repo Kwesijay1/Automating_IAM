@@ -1,0 +1,5 @@
+username,fullname,group,email 
+jdoe,John Doe,engineering,rocka111@outlook.com 
+asmith,Alice Smith,engineering,adjeigideon911@gmail.com 
+mjones,Mike Jones,design,gideon.adjei@amalitechtraining.org
+
