@@ -2,7 +2,7 @@
 This lab exercise assists learners to write a Bash script to automate Identity and Access  Management (IAM) tasks in Linux email notifications.
 It reads user details from a CSV file, creates accounts with secure temporary passwords, forces password changes on first login, and sends credentials via email.
 
-## ** Features**
+##  Features
 - **Bulk user creation** from a CSV file
 - **Secure password generation** (meets complexity requirements)
 - **Email notifications** with temporary credentials
@@ -12,24 +12,24 @@ It reads user details from a CSV file, creates accounts with secure temporary pa
 
 ---
 
-## ** Prerequisites**
-- **Linux system** (tested on Ubuntu)
-- **Root/sudo access** (for user creation)
-- **`mailutils`** (for sending emails)
-- **CSV file** (`users.txt`) containing user details
+##  Prerequisites
+- Linux system (tested on Ubuntu)
+- Root/sudo access (for user creation)
+- `mailutils` (for sending emails)
+- CSV file (`users.txt`) containing user details
 
 ---
 
-## ** Setup & Installation**
+##  Setup & Installation
 
-### **1. Install Required Packages**
+### 1. Install Required Packages
 Ensure `mailutils` is installed for email notifications:
 ```bash
 sudo apt update
 sudo apt install -y mailutils
 ```
 
-#### **Configure Mail Service (Postfix)**
+#### Configure Mail Service (Postfix)
 During installation, you'll be prompted to configure Postfix:
 - Select **"Internet Site"**  
 - Enter your **mail server domain** (e.g., `yourdomain.com`)  
@@ -39,7 +39,7 @@ If you missed this step, reconfigure Postfix:
 sudo dpkg-reconfigure postfix
 ```
 
-#### **Test Email Sending**
+#### Test Email Sending
 Verify that emails work:
 ```bash
 echo "Test email body" | mail -s "Test Subject" your-email@example.com
@@ -48,7 +48,7 @@ echo "Test email body" | mail -s "Test Subject" your-email@example.com
 
 ---
 
-### **2. Prepare the CSV File (`users.txt`)**
+### 2. Prepare the CSV File (`users.txt`)
 Create a CSV file with the following format:
 ```
 username,fullname,group,email
@@ -56,7 +56,7 @@ jdoe,John Doe,engineering,john.doe@example.com
 asmith,Alice Smith,marketing,alice.smith@example.com
 ```
 
-### **3. Download the Script**
+### 3. Download the Script
 Save the script as `iam_setup.sh` in the `Automating_IAM` directory:
 ```bash
 mkdir -p ~/Automating_IAM
@@ -67,13 +67,13 @@ chmod +x iam_setup.sh
 
 ---
 
-## ** Usage**
+##  Usage
 Run the script with the CSV file as input:
 ```bash
 sudo ./iam_setup.sh users.txt
 ```
 
-### **Expected Output**
+### Expected Output
 - Users are created with temporary passwords.
 - Passwords are stored securely in `/root/user_passwords.txt`.
 - A log file (`user_creation.log`) is generated in the `Automating_IAM` directory.
@@ -81,7 +81,7 @@ sudo ./iam_setup.sh users.txt
 
 ---
 
-## ** Files Generated**
+##  Files Generated
 | File | Purpose |
 |------|---------|
 | `/root/user_passwords.txt` | Stores temporary passwords securely (root-only) |
@@ -90,29 +90,29 @@ sudo ./iam_setup.sh users.txt
 
 ---
 
-## ** Security Notes**
-- **`/root/user_passwords.txt`** is restricted to root (`chmod 600`).
-- **Passwords are temporary** and must be changed on first login.
-- **Log files** are readable for auditing (`chmod 644`).
+##  Security Notes
+- `/root/user_passwords.txt` is restricted to root (`chmod 600`).
+- Passwords are temporary and must be changed on first login.
+- Log files are readable for auditing (`chmod 644`).
 
 ---
 
-## ** Troubleshooting**
-### **1. Email Not Sending?**
+##  Troubleshooting
+### 1. Email Not Sending?
 - Check Postfix logs:
   ```bash
   sudo tail -n 20 /var/log/mail.log
   ```
 - Ensure `mailutils` is installed correctly.
 
-### **2. User Creation Fails?**
+### 2. User Creation Fails?
 - Check logs:
   ```bash
   cat ~/Automating_IAM/user_creation.log
   ```
 - Verify CSV file formatting.
 
-### **3. Permission Denied?**
+### 3. Permission Denied?
 - Run the script as root:
   ```bash
   sudo ./iam_setup.sh users.txt
@@ -120,4 +120,4 @@ sudo ./iam_setup.sh users.txt
 
 ---
 
- **Happy Automating!** 
+ # Happy Automating!
